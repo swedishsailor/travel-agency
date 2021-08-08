@@ -11,7 +11,7 @@ const OrderSummary = (props) => (
 
 OrderSummary.propTypes = {
   cost: PropTypes.node,
-  options: PropTypes.node,
+  options: PropTypes.object,
   formatPrice: PropTypes.func,
   calculateTotal: PropTypes.func,
 };
