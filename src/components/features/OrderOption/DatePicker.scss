@@ -1,0 +1,26 @@
+.dpicker {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #E3B924;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dpicker:focus {
+    outline: none;
+  }
+
+  .calendar {
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(27, 37, 86, 0.16);
+    overflow: hidden;
+  }
+
+  .popper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
