@@ -8,9 +8,9 @@ import OrderOption from '../OrderOption/OrderOption';
 const OrderForm = (props) => (
   <Grid>
     <Row>
-      {pricing.map((id, name) => (
+      {pricing.map(({id,name, ...otherProps}, options) => (
         <Col md={4} key={id}>
-          <OrderOption name={name}></OrderOption>
+          <OrderOption name={name} key={id} currentValue={options[id]} {...otherProps}/>
         </Col>
       ))}
       <Col xs={12}>
