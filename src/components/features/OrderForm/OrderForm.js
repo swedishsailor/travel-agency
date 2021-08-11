@@ -5,12 +5,12 @@ import OrderSummary from '../OrderSummary/OrderSummary';
 import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
 
-const OrderForm = (props, options) => (
+const OrderForm = (props) => (
   <Grid>
     <Row>
-      {pricing.map(({id,name, setOrderOption, ...otherProps}) => (
-        <Col md={4} key={id}>
-          <OrderOption name={name} key={id} currentValue={options[id]} setOrderOption={setOrderOption} {...otherProps}/>
+      {pricing.map(({id,name, ...otherProps}, option) => (
+        <Col md={4} key={option.id}>
+          <OrderOption name={name} key={id} currentValue={props.options[option.id]} setOrderOption={props.setOrderOption} {...otherProps}/>
         </Col>
       ))}
       <Col xs={12}>
