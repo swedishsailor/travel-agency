@@ -8,7 +8,7 @@ const TripSummary = ({id, image, name, cost, days, tags}) => (
   <Col xs={12} sm={6} lg={4} className={styles.column}>
     <Link to={`/trip/${id}`} className={styles.link}>
       <article className={styles.component}>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} className={styles.img}/>
         <h3 className={styles.title}>{name}</h3>
         <div className={styles.details}>
           <span>{days} days</span>
@@ -30,7 +30,7 @@ TripSummary.propTypes = {
   name: PropTypes.string,
   intro: PropTypes.string,
   cost: PropTypes.string,
-  days: PropTypes.number,
+  days: PropTypes.string,
   tags: PropTypes.array,
 };
 
