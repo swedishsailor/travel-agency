@@ -45,8 +45,8 @@ describe('Component TripSummary', () => {
   });
 
   it('should not render spans if tags is false', () => {
-    const component = shallow(<TripSummary image={''} name={''} cost={''} days={''} id={''} tags={{}} />);
+    const component = shallow(<TripSummary image={''} name={''} cost={''} days={''} id={''} tags={[]} />);
 
-    expect(component.find('.tags')).toBe(false || [] || {});
+    expect(component.find('.tags')).toEqual({} || [] || false);
   });
 });
